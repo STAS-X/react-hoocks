@@ -6,8 +6,10 @@ import Subtitle from "../components/common/typografy/subtitle";
 import Title from "../components/common/typografy/title";
 import PrevStateExample from "../components/examples/useRef/prevState";
 import ProgrammableActionsExample from "../components/examples/useRef/programmableActions";
+import ProgRefHW from "../components/examples/useRef/progRefHW.jsx";
 import RenderCountExample from "../components/examples/useRef/renderCount";
 import UseRefExercise from "../components/exercises/useRefExercise";
+
 const UseRefExample = () => {
     return (
         <>
@@ -35,6 +37,11 @@ const UseRefExample = () => {
                 <ProgrammableActionsExample />
             </div>
             <Divider />
+            <div>
+                <Subtitle>Задание к уроку</Subtitle>
+                <Divider />
+                <ProgRefHW />
+            </div>
             <div>
                 <Subtitle>Упражнения</Subtitle>
                 <UseRefExercise />

@@ -6,6 +6,7 @@ import CollapseWrapper from "../components/common/collapse";
 import Divider from "../components/common/divider";
 import Subtitle from "../components/common/typografy/subtitle";
 import ReactChildrenExample from "../components/examples/children/reactChildrenExample";
+import ReactChildrenEnumerate from "../components/examples/children/reactChildrenEnumerate";
 import ChildrenExercise from "../components/exercises/childrenExercise";
 const ReactChildren = () => {
     return (
@@ -100,6 +101,10 @@ const ReactChildren = () => {
             <Subtitle>Examples</Subtitle>
 
             <ReactChildrenExample />
+            <Divider />
+            <Subtitle>HomeWork</Subtitle>
+
+            <ReactChildrenEnumerate />
             <Divider />
             <Subtitle>Упражнения</Subtitle>
             <ChildrenExercise />
