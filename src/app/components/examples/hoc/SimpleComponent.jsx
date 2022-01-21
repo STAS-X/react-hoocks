@@ -15,7 +15,7 @@ const SimpleComponent = ({ name, onLogIn, onLogOut, isAuth }) => {
     return (
         <>
             <Subtitle>
-                {name || (data.isAuth ? "LogOutComponent" : "LogInComponent")}
+                {(data.isAuth ? "LogInComponent" : "LogOutComponent") || name }
             </Subtitle>
             <button className="btn btn-primary mt-2" onClick={handleClick}>
                 {data.isAuth ? "Выйти из системы" : "Войти в систему"}

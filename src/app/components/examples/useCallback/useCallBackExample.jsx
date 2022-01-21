@@ -20,9 +20,12 @@ const UseCallBackExample = () => {
   }, [validateWithOutCallback]);
 
   // With Callback
-  const validateWithCallback = useCallback((data) => {
-    console.log(data);
-  }, []);
+  const validateWithCallback = useCallback(
+      (data) => {
+          console.log(data);
+      },
+      []
+  );
   useEffect(() => {
     withCallback.current++;
   }, [validateWithCallback]);

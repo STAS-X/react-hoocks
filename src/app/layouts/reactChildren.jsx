@@ -8,6 +8,9 @@ import Subtitle from "../components/common/typografy/subtitle";
 import ReactChildrenExample from "../components/examples/children/reactChildrenExample";
 import ReactChildrenEnumerate from "../components/examples/children/reactChildrenEnumerate";
 import ChildrenExercise from "../components/exercises/childrenExercise";
+
+const MemorizedChildrenEnumearte = React.memo(ReactChildrenEnumerate);
+
 const ReactChildren = () => {
     return (
         <>
@@ -104,7 +107,7 @@ const ReactChildren = () => {
             <Divider />
             <Subtitle>HomeWork</Subtitle>
 
-            <ReactChildrenEnumerate />
+            <MemorizedChildrenEnumearte />
             <Divider />
             <Subtitle>Упражнения</Subtitle>
             <ChildrenExercise />

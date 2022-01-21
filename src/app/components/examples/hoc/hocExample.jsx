@@ -1,5 +1,6 @@
 import React from "react";
 import Component from "./someComponent";
+import SimpleComponent from "./SimpleComponent";
 
 import CardWrapper from "../../common/Card";
 import SmallTitle from "../../common/typografy/smallTitle";
@@ -12,7 +13,7 @@ const HOCExample = () => {
   const ComponentWithAuth = withLogin(Component);
   const ComponentWithPropsStyles = withPropsStyles(Component);
   const NewComponent = withPropsStyles(ComponentWithAuth);
-  const LogInOutComponent = withLogInOut(Component);
+  const LogInOutComponent = withLogInOut(SimpleComponent);
   return (
       <>
           <CardWrapper>

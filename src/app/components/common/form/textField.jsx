@@ -13,6 +13,7 @@ const TextField = ({ label, type, name, value, onChange, error }) => {
     const toggleShowPassword = () => {
         setShowPassword((prevState) => !prevState);
     };
+
     return (
         <div className="mb-4">
             <label htmlFor={name}> {label}</label>
@@ -56,4 +57,4 @@ TextField.propTypes = {
     error: PropTypes.string
 };
 
-export default TextField;
+export default React.memo(TextField);

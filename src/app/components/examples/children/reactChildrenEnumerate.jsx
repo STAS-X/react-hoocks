@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import CardWrapper from "../../common/Card";
 import Divider from "../../common/divider";
 import TextField from "../../common/form/textField";
@@ -7,9 +7,15 @@ import PropTypes from "prop-types";
 
 const FormComponent = ({ children }) => {
     const [data, setData] = useState({});
-    const handleChange = (target) => {
-        setData((prevState) => ({ ...prevState, [target.name]: target.value }));
-    };
+    const handleChange = useCallback(
+        (target) => {
+            setData((prevState) => ({
+                ...prevState,
+                [target.name]: target.value
+            }));
+            console.log(`rerenderer component ${target.name}`);
+        }, [data]
+    );
 
     return React.Children.map(children, (child, index) => {
         const config = {
@@ -18,7 +24,6 @@ const FormComponent = ({ children }) => {
             label: `${child.props.label} [компонент списка номер ${index + 1}]`,
             value: data[child.props.name] || ""
         };
-
         return React.cloneElement(child, config);
     });
 };
